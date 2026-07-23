@@ -150,3 +150,34 @@
 .project-card:hover .project-media-icon {
   transform: scale(1.1);
 }
+
+/* Sizing and scaling for actual project media files (images & videos) */
+.project-media-file {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover .project-media-file {
+  transform: scale(1.06);
+}
+
+/* Detailed bullet explanations list styles */
+.project-details-list {
+  margin: 0.5rem 0 1.25rem 0;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+  color: var(--text-secondary);
+}
+
+.project-detail-item {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.project-detail-item::marker {
+  color: var(--accent-cyan);
+}

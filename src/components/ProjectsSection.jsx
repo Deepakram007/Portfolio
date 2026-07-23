@@ -11,7 +11,14 @@ const projects = [
     githubUrl: 'https://github.com/Deepakram007/AI-Powered-Code-Review-Bot',
     liveUrl: '#',
     icon: Bot,
-    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    image: '', // Add image path here, e.g., '/images/code-review-bot.jpg'
+    video: '', // Add video path here, e.g., '/videos/code-review-bot.mp4'
+    details: [
+      'Designed and built an enterprise-ready GitHub App using TypeScript and Node.js.',
+      'Implemented BullMQ and Redis queues to handle high-volume webhook delivery under 10ms.',
+      'Integrated OpenAI GPT-4o with custom batch diff prompts to post inline PR code reviews.'
+    ]
   },
   {
     title: 'Code Review Bot - Automation Testing Suite',
@@ -21,7 +28,14 @@ const projects = [
     githubUrl: 'https://github.com/Deepakram007/My-Automation-testing-on-Code-Review_Bot',
     liveUrl: '#',
     icon: Terminal,
-    gradient: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)'
+    gradient: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)',
+    image: '', // Add image path here
+    video: '', // Add video path here
+    details: [
+      'Developed an end-to-end testing suite using Playwright to validate webhook verification and review posting.',
+      'Created a mock GitHub API environment to simulate PR updates, reviews, and sentiment checks.',
+      'Configured automated CI/CD workflows using GitHub Actions and Dockerized environments.'
+    ]
   },
   {
     title: 'RAG Chatbot',
@@ -31,7 +45,14 @@ const projects = [
     githubUrl: 'https://github.com/Deepakram007/Chat-bot',
     liveUrl: '#',
     icon: MessageSquare,
-    gradient: 'linear-gradient(135deg, #00f2fe 0%, #4facfe 100%)'
+    gradient: 'linear-gradient(135deg, #00f2fe 0%, #4facfe 100%)',
+    image: '', // Add image path here
+    video: '', // Add video path here
+    details: [
+      'Built a custom FastAPI backend utilizing Chroma DB for semantic vector searches.',
+      'Integrated sentence-transformers embeddings for precise top-k context retrieval.',
+      'Implemented user-facing document uploads (TXT/PDF) via Streamlit with automatic deduplication.'
+    ]
   },
   {
     title: 'Scalable CSV Processing & Job Queue System',
@@ -41,7 +62,13 @@ const projects = [
     githubUrl: '#',
     liveUrl: '#',
     icon: Database,
-    gradient: 'linear-gradient(135deg, #2af598 0%, #009efd 100%)'
+    gradient: 'linear-gradient(135deg, #2af598 0%, #009efd 100%)',
+    image: '', // Add image path here
+    video: '', // Add video path here
+    details: [
+      'Created a streaming CSV parser using BullMQ to process massive files without memory leaks.',
+      'Designed a React dashboard showing real-time job progress (0-100%) with Server-Sent Events.'
+    ]
   },
   {
     title: 'Smart Mall Navigation System',
@@ -51,7 +78,13 @@ const projects = [
     githubUrl: '#',
     liveUrl: '#',
     icon: Navigation,
-    gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+    gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+    image: '', // Add image path here
+    video: '', // Add video path here
+    details: [
+      'Constructed a 3D mall map using Three.js and React Three Fiber for store pathfinding.',
+      'Integrated MongoDB Atlas Vector Search and Gemini embeddings for natural language queries.'
+    ]
   }
 ];
 
@@ -63,16 +96,34 @@ const ProjectsSection = () => {
         {projects.map((project, index) => (
           <div key={index} className="project-card glass-panel">
             
-            {/* MEDIA CONTAINER WITH THEME GRADIENTS AND ICONS */}
-            <div className="project-media placeholder-media" style={{ background: project.gradient }}>
-              <div className="project-media-icon-wrapper">
-                <project.icon className="project-media-icon" size={48} />
-              </div>
+            {/* MEDIA CONTAINER: Renders Video/Image if present, otherwise falls back to Gradient Placeholder */}
+            <div className="project-media">
+              {project.video ? (
+                <video src={project.video} autoPlay loop muted playsInline className="project-media-file" />
+              ) : project.image ? (
+                <img src={project.image} alt={project.title} className="project-media-file" />
+              ) : (
+                <div className="placeholder-media" style={{ background: project.gradient }}>
+                  <div className="project-media-icon-wrapper">
+                    <project.icon className="project-media-icon" size={48} />
+                  </div>
+                </div>
+              )}
             </div>
             
             <div className="project-content">
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>
+              
+              {/* Detailed bullet explanation */}
+              {project.details && project.details.length > 0 && (
+                <ul className="project-details-list">
+                  {project.details.map((detail, idx) => (
+                    <li key={idx} className="project-detail-item">{detail}</li>
+                  ))}
+                </ul>
+              )}
+
               <p className="project-features"><strong>Highlight:</strong> {project.features}</p>
               
               <div className="project-stack">
