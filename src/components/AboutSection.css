@@ -1,0 +1,36 @@
+.about-content {
+  padding: 3rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+}
+
+.education-box {
+  margin-top: 3rem;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 2rem;
+}
+
+.education-box h3 {
+  color: var(--accent-cyan);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.edu-item {
+  margin-bottom: 1.5rem;
+}
+
+.edu-item h4 {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.edu-item p {
+  font-size: 0.95rem;
+  margin: 0;
+}
