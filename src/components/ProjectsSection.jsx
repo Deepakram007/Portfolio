@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, ExternalLink } from 'lucide-react';
+import { Code, ExternalLink, Bot, Database, Navigation, MessageSquare } from 'lucide-react';
 import './ProjectsSection.css';
 
 const projects = [
@@ -8,8 +8,20 @@ const projects = [
     description: 'A multi-tenant SaaS platform that reviews GitHub PRs using AI and posts inline comments, with a React dashboard for monitoring reviews and subscription metrics.',
     stack: ['Node.js', 'TypeScript', 'PostgreSQL', 'Redis', 'BullMQ', 'OpenAI'],
     features: 'Supports multi-tenant orgs with role-based access across N+ teams.',
-    githubUrl: '#', // Add real URL later
-    liveUrl: '#' // Add real URL later
+    githubUrl: 'https://github.com/Deepakram007/My-Automation-testing-on-Code-Review_Bot',
+    liveUrl: '#',
+    icon: Bot,
+    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  },
+  {
+    title: 'RAG Chatbot',
+    description: 'A FastAPI and Chroma-based retrieval-augmented chatbot that answers questions grounded in user-provided documents using NVIDIA NIM APIs.',
+    stack: ['FastAPI', 'Python', 'Chroma DB', 'NVIDIA NIM', 'Llama 3', 'Streamlit'],
+    features: 'Features text/file ingestion with automatic timestamping to prevent source collisions, plus a streamlined Streamlit demo.',
+    githubUrl: 'https://github.com/Deepakram007/Chat-bot',
+    liveUrl: '#',
+    icon: MessageSquare,
+    gradient: 'linear-gradient(135deg, #00f2fe 0%, #4facfe 100%)'
   },
   {
     title: 'Scalable CSV Processing & Job Queue System',
@@ -17,7 +29,9 @@ const projects = [
     stack: ['Node.js', 'Redis', 'React', 'BullMQ'],
     features: 'Real-time job progress tracking (0-100%) via a live React dashboard, automated file cleanup, and sub-second polling latency.',
     githubUrl: '#',
-    liveUrl: '#'
+    liveUrl: '#',
+    icon: Database,
+    gradient: 'linear-gradient(135deg, #2af598 0%, #009efd 100%)'
   },
   {
     title: 'Smart Mall Navigation System',
@@ -25,7 +39,9 @@ const projects = [
     stack: ['React', 'Django', 'Three.js', 'React Three Fiber', 'MongoDB', 'Gemini'],
     features: 'Multimodal visual fashion search via CLIP ViT-B/32 + cosine similarity, plus an interactive 3D mall map.',
     githubUrl: '#',
-    liveUrl: '#'
+    liveUrl: '#',
+    icon: Navigation,
+    gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
   }
 ];
 
@@ -37,11 +53,11 @@ const ProjectsSection = () => {
         {projects.map((project, index) => (
           <div key={index} className="project-card glass-panel">
             
-            {/* MEDIA PLACEHOLDER - INSERT YOUR IMAGE OR VIDEO HERE */}
-            <div className="project-media placeholder-media">
-              <span>[Insert Project Image/Video Here]</span>
-              {/* Example for image: <img src="/your-image.png" alt="Project" /> */}
-              {/* Example for video: <video src="/your-video.mp4" autoPlay loop muted /> */}
+            {/* MEDIA CONTAINER WITH THEME GRADIENTS AND ICONS */}
+            <div className="project-media placeholder-media" style={{ background: project.gradient }}>
+              <div className="project-media-icon-wrapper">
+                <project.icon className="project-media-icon" size={48} />
+              </div>
             </div>
             
             <div className="project-content">

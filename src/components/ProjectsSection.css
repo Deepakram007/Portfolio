@@ -107,3 +107,46 @@
 .project-link:hover {
   color: var(--accent-cyan);
 }
+
+/* Custom visual system for project media placeholders */
+.placeholder-media {
+  border: none !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 250px !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.project-media-icon-wrapper {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover .project-media-icon-wrapper {
+  transform: scale(1.18) rotate(8deg);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.4);
+}
+
+.project-media-icon {
+  color: #ffffff;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.25));
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-media-icon {
+  transform: scale(1.1);
+}
