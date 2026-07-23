@@ -43,3 +43,17 @@
   font-size: 0.95rem;
   margin: 0;
 }
+
+@media (max-width: 600px) {
+  .achievement-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  .achievement-card:hover {
+    transform: translateY(-3px);
+    border-left: none;
+    border-top: 4px solid var(--accent-purple);
+  }
+}

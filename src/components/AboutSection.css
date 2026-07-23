@@ -34,3 +34,16 @@
   font-size: 0.95rem;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .about-content {
+    padding: 1.5rem;
+  }
+  .education-box {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+  .education-box h3 {
+    font-size: 1.3rem;
+  }
+}

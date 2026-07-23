@@ -181,3 +181,13 @@
 .project-detail-item::marker {
   color: var(--accent-cyan);
 }
+
+@media (max-width: 768px) {
+  .project-content {
+    padding: 1.5rem;
+  }
+  .placeholder-media,
+  .project-media-file {
+    height: 200px !important;
+  }
+}
