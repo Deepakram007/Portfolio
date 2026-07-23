@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, ExternalLink, Bot, Database, Navigation, MessageSquare } from 'lucide-react';
+import { Code, ExternalLink, Bot, Database, Navigation, MessageSquare, Terminal } from 'lucide-react';
 import './ProjectsSection.css';
 
 const projects = [
@@ -8,10 +8,20 @@ const projects = [
     description: 'A multi-tenant SaaS platform that reviews GitHub PRs using AI and posts inline comments, with a React dashboard for monitoring reviews and subscription metrics.',
     stack: ['Node.js', 'TypeScript', 'PostgreSQL', 'Redis', 'BullMQ', 'OpenAI'],
     features: 'Supports multi-tenant orgs with role-based access across N+ teams.',
-    githubUrl: 'https://github.com/Deepakram007/My-Automation-testing-on-Code-Review_Bot',
+    githubUrl: 'https://github.com/Deepakram007/AI-Powered-Code-Review-Bot',
     liveUrl: '#',
     icon: Bot,
     gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  },
+  {
+    title: 'Code Review Bot - Automation Testing Suite',
+    description: 'Comprehensive automation testing suite designed to validate the end-to-end functionality, webhook delivery, AI sentiment feedback, and API reliability of the Code Review Bot.',
+    stack: ['Playwright', 'TypeScript', 'Node.js', 'GitHub Actions', 'Docker'],
+    features: 'Enforces system stability with E2E integration tests, verifying webhook responses in <10ms and automated GitHub PR commentary.',
+    githubUrl: 'https://github.com/Deepakram007/My-Automation-testing-on-Code-Review_Bot',
+    liveUrl: '#',
+    icon: Terminal,
+    gradient: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)'
   },
   {
     title: 'RAG Chatbot',
