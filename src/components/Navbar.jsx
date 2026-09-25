@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, FileText } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -11,7 +11,9 @@ const Navbar = () => {
   return (
     <nav className="navbar glass-panel">
       <div className="nav-brand">
-        <span className="text-gradient">Deepakram S</span>
+        <a href="#home" style={{ textDecoration: 'none' }}>
+          <span className="text-gradient">Deepakram S</span>
+        </a>
       </div>
       
       {/* Mobile Toggle Button */}
@@ -25,14 +27,39 @@ const Navbar = () => {
         <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
         <li><a href="#internship" onClick={closeMenu}>Internship</a></li>
         <li><a href="#achievements" onClick={closeMenu}>Achievements</a></li>
-        {/* Contact shown inside mobile dropdown */}
         <li className="mobile-only-contact">
-          <a href="#footer" onClick={closeMenu} className="btn-primary">Contact</a>
+          <a
+            href="/Deepakram_S_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+            className="btn-secondary"
+            style={{ width: '100%', justifyContent: 'center' }}
+          >
+            <FileText size={16} />
+            <span>Resume</span>
+          </a>
+        </li>
+        <li className="mobile-only-contact">
+          <a href="#footer" onClick={closeMenu} className="btn-primary" style={{ width: '100%', textAlign: 'center' }}>
+            Contact
+          </a>
         </li>
       </ul>
 
-      {/* Desktop-only Contact button */}
-      <a href="#footer" className="btn-primary desktop-contact">Contact</a>
+      {/* Desktop-only action buttons */}
+      <div className="desktop-actions">
+        <a
+          href="/Deepakram_S_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-secondary nav-resume-btn"
+        >
+          <FileText size={16} />
+          <span>Resume</span>
+        </a>
+        <a href="#footer" className="btn-primary desktop-contact">Contact</a>
+      </div>
     </nav>
   );
 };

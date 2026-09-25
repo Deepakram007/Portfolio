@@ -52,11 +52,41 @@
 .hero-cta {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-cta .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-resume-btn {
+  border-color: rgba(0, 243, 255, 0.4) !important;
+  color: #fff !important;
+}
+
+.hero-resume-btn:hover {
+  background: rgba(0, 243, 255, 0.15) !important;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.25);
 }
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .hero-cta a {
+    width: 100%;
+    justify-content: center;
   }
 }

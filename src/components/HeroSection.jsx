@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
+import { FileText, ArrowRight } from 'lucide-react';
 import './HeroSection.css';
 
 const RotatingCube = () => {
@@ -40,8 +41,19 @@ const HeroSection = () => {
           Computer Science undergraduate building distributed systems, AI-powered tools, and full-stack platforms.
         </p>
         <div className="hero-cta">
-          <a href="#projects" className="btn-primary">View Featured Work</a>
-          <a href="#internship" className="btn-secondary">Experience</a>
+          <a href="#projects" className="btn-primary">
+            <span>View Featured Work</span>
+            <ArrowRight size={18} />
+          </a>
+          <a
+            href="/Deepakram_S_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary hero-resume-btn"
+          >
+            <FileText size={18} />
+            <span>Download Resume</span>
+          </a>
           <a href="#footer" className="btn-secondary">Get in Touch</a>
         </div>
       </div>
