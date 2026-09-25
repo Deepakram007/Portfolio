@@ -1,4 +1,6 @@
 import React from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
@@ -22,6 +24,8 @@ function App() {
         <AchievementsSection />
       </main>
       <Footer />
+      <SpeedInsights />
+      <Analytics />
     </div>
   );
 }
