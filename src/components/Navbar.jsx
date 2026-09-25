@@ -29,7 +29,7 @@ const Navbar = () => {
         <li><a href="#achievements" onClick={closeMenu}>Achievements</a></li>
         <li className="mobile-only-contact">
           <a
-            href="/Deepakram_S_Resume.pdf"
+            href="/Deepakram_Resume_pdf.pdf"
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}
@@ -50,7 +50,7 @@ const Navbar = () => {
       {/* Desktop-only action buttons */}
       <div className="desktop-actions">
         <a
-          href="/Deepakram_S_Resume.pdf"
+          href="/Deepakram_Resume_pdf.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-secondary nav-resume-btn"

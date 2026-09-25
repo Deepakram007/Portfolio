@@ -46,7 +46,7 @@ const HeroSection = () => {
             <ArrowRight size={18} />
           </a>
           <a
-            href="/Deepakram_S_Resume.pdf"
+            href="/Deepakram_Resume_pdf.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary hero-resume-btn"
