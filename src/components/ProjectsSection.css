@@ -1,3 +1,56 @@
+.project-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid var(--glass-border);
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+  color: #000;
+  font-weight: 600;
+  border-color: transparent;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+}
+
+.project-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.metric-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  background: rgba(188, 19, 254, 0.12);
+  color: #e0aaff;
+  border: 1px solid rgba(188, 19, 254, 0.3);
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;

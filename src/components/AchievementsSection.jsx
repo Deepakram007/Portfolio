@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Trophy } from 'lucide-react';
+import { Award, Trophy, ExternalLink } from 'lucide-react';
 import './AchievementsSection.css';
 
 const achievements = [
@@ -14,18 +14,20 @@ const achievements = [
     icon: <Award size={24} className="achievement-icon" />
   },
   {
+    title: 'Claude 101 Certificate',
+    description: 'Anthropic (2026).',
+    link: 'https://anthropic.com',
+    icon: <Award size={24} className="achievement-icon" />
+  },
+  {
     title: 'GenAI-Powered Data Analytics Job Simulation',
     description: 'TATA - Forage (2025).',
+    link: 'https://www.theforage.com',
     icon: <Award size={24} className="achievement-icon" />
   },
   {
     title: 'Java Programming Masterclass',
-    description: 'Udemy.',
-    icon: <Award size={24} className="achievement-icon" />
-  },
-  {
-    title: 'Claude 101 Certificate',
-    description: 'Anthropic (2026).',
+    description: 'Udemy Comprehensive Certification.',
     icon: <Award size={24} className="achievement-icon" />
   }
 ];
@@ -41,7 +43,20 @@ const AchievementsSection = () => {
               {item.icon}
             </div>
             <div className="achievement-content">
-              <h3 className="achievement-title">{item.title}</h3>
+              <div className="achievement-header-row">
+                <h3 className="achievement-title">{item.title}</h3>
+                {item.link && (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="achievement-link"
+                    aria-label={`Verify ${item.title}`}
+                  >
+                    <ExternalLink size={16} />
+                  </a>
+                )}
+              </div>
               <p className="achievement-description">{item.description}</p>
             </div>
           </div>

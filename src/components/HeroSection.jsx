@@ -40,7 +40,9 @@ const HeroSection = () => {
           Computer Science undergraduate building distributed systems, AI-powered tools, and full-stack platforms.
         </p>
         <div className="hero-cta">
-          <a href="#projects" className="btn-primary">View My Work</a>
+          <a href="#projects" className="btn-primary">View Featured Work</a>
+          <a href="#internship" className="btn-secondary">Experience</a>
+          <a href="#footer" className="btn-secondary">Get in Touch</a>
         </div>
       </div>
     </section>

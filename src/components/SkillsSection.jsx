@@ -7,28 +7,28 @@ const skillCategories = [
     skills: ['Java', 'JavaScript', 'TypeScript', 'Python']
   },
   {
-    title: 'Frontend',
-    skills: ['React.js', 'Three.js', 'HTML5', 'CSS3']
+    title: 'Frontend & Mobile',
+    skills: ['React.js', 'Next.js', 'React Native', 'Three.js', 'HTML5', 'CSS3']
   },
   {
-    title: 'Backend',
-    skills: ['Node.js', 'REST APIs', 'BullMQ', 'WebSockets']
+    title: 'Backend Systems',
+    skills: ['Node.js', 'Express', 'FastAPI', 'REST APIs', 'BullMQ', 'WebSockets']
   },
   {
-    title: 'Databases',
-    skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis']
+    title: 'Databases & Vector Stores',
+    skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'ChromaDB', 'Vector Search']
   },
   {
-    title: 'DevOps & Tools',
-    skills: ['Docker', 'Docker Compose', 'GitHub Actions', 'CI/CD', 'Git']
+    title: 'DevOps & Cloud',
+    skills: ['Terraform', 'AWS ECS Fargate', 'Docker', 'GitHub Actions', 'CI/CD', 'Git']
   },
   {
-    title: 'AI / ML',
-    skills: ['OpenAI APIs', 'Gemini', 'CLIP', 'RAG pipelines', 'Vector Search']
+    title: 'AI / ML & GenAI',
+    skills: ['OpenAI APIs', 'NVIDIA NIM (Llama 3)', 'Gemini', 'CLIP', 'RAG Pipelines', 'Embeddings']
   },
   {
-    title: 'Design & Concepts',
-    skills: ['Figma', 'Blender', 'DSA', 'OOP', 'System Design']
+    title: 'Architecture & Concepts',
+    skills: ['System Design', 'Distributed Queues', 'Stream Processing', 'DSA', 'OOP']
   }
 ];
 

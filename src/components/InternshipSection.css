@@ -99,6 +99,44 @@
   color: var(--accent-purple);
 }
 
+.internship-certificate {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+
+.certificate-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  font-weight: 500;
+}
+
+.certificate-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.certificate-link:hover {
+  opacity: 0.8;
+}
+
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .internship-card {
